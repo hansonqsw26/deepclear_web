@@ -25,7 +25,7 @@ const Mission = () => {
                                 <div className="service-content">
                                     <h3>Logistics</h3>
                                     <p>
-                                        DeepClear Inc. provides efficient and reliable logistics solutions across Canada, ensuring timely delivery and seamless supply chain management for businesses of all sizes.
+                                        DeepClear Solution Inc. provides efficient and reliable logistics solutions across Canada, ensuring timely delivery and seamless supply chain management for businesses of all sizes.
                                     </p>
                                     <Link to="/servicesingle">See More...</Link>
                                 </div>
@@ -43,7 +43,7 @@ const Mission = () => {
                                 <div className="service-content2">
                                     <h3>Customs Brokerage</h3>
                                     <p>
-                                        DeepClear Inc. specializes in Canadian customs brokerage, providing expert guidance and compliance services to ensure smooth import and export processes across borders.
+                                        DeepClear Solution Inc. specializes in Canadian customs brokerage, providing expert guidance and compliance services to ensure smooth import and export processes across borders.
                                     </p>
                                     <Link to="/freight">See More...</Link>
                                 </div>

@@ -46,7 +46,7 @@ const Features3 = () => {
                             <div className="t-text">
                                 <h2>Comprehensive Logistics & Customs Brokerage</h2>
                                 <p>
-                                    DeepClear Inc. specializes in seamless logistics and customs brokerage solutions across Canada.
+                                    DeepClear Solution Inc. specializes in seamless logistics and customs brokerage solutions across Canada.
                                     We manage freight, ensure compliance with Canadian import/export regulations, and optimize supply chains for businesses of all sizes.
                                 </p>
                             </div>

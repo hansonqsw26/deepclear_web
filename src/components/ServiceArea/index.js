@@ -21,7 +21,7 @@ const ServiceArea = (props) => {
                                 </div>
                                 <h2>Land Transport</h2>
                                 <p>
-                                    DeepClear Inc. provides reliable land transport across Canada, ensuring timely delivery and secure handling of all shipments.
+                                    DeepClear Solution Inc. provides reliable land transport across Canada, ensuring timely delivery and secure handling of all shipments.
                                 </p>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ const ServiceArea = (props) => {
                                 </div>
                                 <h2>Air Freight</h2>
                                 <p>
-                                    DeepClear Inc. handles air freight with speed and precision, ensuring critical shipments reach their destination safely and on time.
+                                    DeepClear SolutionInc. handles air freight with speed and precision, ensuring critical shipments reach their destination safely and on time.
                                 </p>
                             </div>
                         </div>

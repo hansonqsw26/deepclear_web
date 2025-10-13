@@ -47,7 +47,7 @@ const TransportAir = (props) => {
                         <div className="Freight-item">
                             <h3>Expert Customs Brokerage Services</h3>
                             <p>
-                                DeepClear Inc. specializes exclusively in Canadian customs brokerage, ensuring that your imports and exports comply with all regulations.
+                                DeepClear Solution Inc. specializes exclusively in Canadian customs brokerage, ensuring that your imports and exports comply with all regulations.
                                 We streamline documentation, minimize delays, and provide professional guidance for businesses of all sizes across Canada.
                             </p>
                             {/*<img src={props.simg} alt="Customs Brokerage"/>*/}

@@ -14,7 +14,7 @@ const AboutSection2 = () => {
                             </div>
                             <h2>Who We Are?</h2>
                             <p>
-                                DeepClear Inc. is a leading customs brokerage and logistics company based in Ontario, dedicated to seamless import and export solutions.
+                                DeepClear Solution Inc. is a leading customs brokerage and logistics company based in Ontario, dedicated to seamless import and export solutions.
                             </p>
                             <p>
                                 We specialize in customs clearance, freight management, and supply chain solutions, ensuring your goods move efficiently and compliantly across borders.
