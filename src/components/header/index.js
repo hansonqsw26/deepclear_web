@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import MobileMenu from '../../components/MobileMenu';
 import logo from '../../images/logo/logo.png';
@@ -6,33 +6,12 @@ import logo from '../../images/logo/logo.png';
 import './style.css';
 
 const Header = () => {
-    const [scrollUp, setScrollUp] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
-
     const SubmitHandler = (e) => {
         e.preventDefault();
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-
-            // Trigger when user scrolls down/up past 50px
-            if (currentScrollY > 50) {
-                setScrollUp(true);
-            } else {
-                setScrollUp(false);
-            }
-
-            setLastScrollY(currentScrollY);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
-
-    const textColor = scrollUp ? '#0d1b3d' : '#87ceeb'; // Dark text when white bg, Sky Blue when transparent
-    const topContactColor = '#fff';
+    const textColor = '#0d1b3d'; // Dark text color
+    const topContactColor = '#fff'; // Top bar Contact Us
 
     return (
         <header>
@@ -40,7 +19,7 @@ const Header = () => {
             <div
                 className="header-top-1"
                 style={{
-                    backgroundColor: scrollUp ? '#e0e0e0' : '#0d1b3d',
+                    backgroundColor: '#0d1b3d', // Always dark
                     transition: 'background-color 0.3s ease',
                 }}
             >
@@ -65,21 +44,21 @@ const Header = () => {
             <div
                 className="header-style-1"
                 style={{
-                    backgroundColor: scrollUp ? '#ffffff' : 'transparent',
-                    boxShadow: scrollUp ? '0 2px 8px rgba(0,0,0,0.1)' : 'none',
-                    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+                    backgroundColor: '#ffffff', // Always white
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.1)', // Optional shadow
+                    transition: 'none',
                 }}
             >
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3 col-md-10 col-sm-10 col-8 col-t">
-                            <div className="logo" style={{position: 'relative', top: '-22px'}}>
+                            <div className="logo" style={{ position: 'relative', top: '-22px' }}>
                                 <Link to="/"><img src={logo} alt="DeepClear Logo"/></Link>
                             </div>
                         </div>
                         <div className="col-lg-8 d-none d-lg-block col-m">
                             <div className="main-menu">
-                            <nav className="nav_mobile_menu">
+                                <nav className="nav_mobile_menu">
                                     <ul>
                                         <li className="active">
                                             <Link to="/" style={{ color: textColor }}>Home</Link>

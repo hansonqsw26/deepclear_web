@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo/logo.png';
+import logo2 from '../../images/logo/logo2.png';
 import './style.css';
 
 const FooterSection = () => {
@@ -15,9 +15,8 @@ const FooterSection = () => {
                         <div className="col-lg-4 col-md-12 footer-left">
                             <div className="footer-left-inner">
                                 <div className="wpo-footer-logo">
-                                    <img src={logo} alt="DeepClear Logo" />
+                                    <img src={logo2} alt="DeepClear Logo" />
                                 </div>
-                                <p>Think Deep, Solve Clear</p>
                                 <div className="social">
                                     <ul className="d-flex">
                                         <li>
