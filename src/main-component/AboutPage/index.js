@@ -19,7 +19,7 @@ const Aboutpage = () => {
            {/*<Features2/>*/}
            <AboutSection2/>
            <Mission/>
-           <TeamSection/>
+           {/*<TeamSection/>*/}
            {/*<Newsletter nwclass={'wpo-newsletter-section'}/>*/}
            <FooterSection/>
        </div>
