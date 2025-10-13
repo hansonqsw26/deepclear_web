@@ -75,9 +75,13 @@
     right: 20px;
     top: 17px;
 }
-.showmenu i{
+.showmenu i {
     font-size: 30px;
-    color: #fff;
+    color: #000 !important; /* Change to black */
+}
+.header-style-3 .showmenu i,
+.header-style-2 .showmenu i {
+    color: #000 !important; /* Ensure overrides previous white rules */
 }
 .mobileMenu{
     display: none;

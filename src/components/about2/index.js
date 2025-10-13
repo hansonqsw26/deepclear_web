@@ -25,7 +25,7 @@ const AboutSection2 = () => {
                         </div>
                         <div className="signature-section">
                             <div className="si-text">
-                                <p>DeepClear Inc. Team</p>
+                                <p>DeepClear Solution Inc. Team</p>
                                 <span>Leadership & Operations</span>
                             </div>
                             <img src={abimg2} alt=""/>
