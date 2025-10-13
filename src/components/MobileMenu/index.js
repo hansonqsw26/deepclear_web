@@ -1,32 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Collapse, CardBody, Card } from 'reactstrap';
-import { Link } from 'react-router-dom'
-import PerfectScrollbar from 'react-perfect-scrollbar'
-import './style.css';
+import { Link } from 'react-router-dom';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import './style.css';
 
 const menus = [
     {
         id: 1,
         title: 'Home',
-        link: '/home',
-        submenu: [
-            {
-                id: 11,
-                title: 'Home One',
-                link: '/home'
-            },
-            {
-                id: 12,
-                title: 'Home One 2',
-                link: '/home2'
-            },
-            {
-                id: 13,
-                title: 'Home One 3',
-                link: '/home3'
-            },
-        ]
+        link: '/',
     },
     {
         id: 2,
@@ -39,137 +22,106 @@ const menus = [
         submenu: [
             {
                 id: 31,
-                title: 'service single',
+                title: 'Logistic',
                 link: '/servicesingle',
             },
             {
                 id: 32,
-                title: 'Air Freight',
+                title: 'Customs Brokerage',
                 link: '/freight',
-            },
-            {
-                id: 33,
-                title: 'Road Freight',
-                link: '/road',
-            },
-            {
-                id: 34,
-                title: 'Ocean Freight',
-                link: '/ocean',
-            },
+            }
         ]
     },
     {
         id: 4,
-        title: 'Blog',
-        submenu: [
-            {
-                id: 41,
-                title: 'Blog with sidebar',
-                link: '/blog',
-            },
-            {
-                id: 42,
-                title: 'Blog full width',
-                link: '/blog-fullwidth',
-            },
-            {
-                id: 43,
-                title: 'Blog single sidebar',
-                link: '/blog-single',
-            },
-            {
-                id: 44,
-                title: 'Blog single fullwidth',
-                link: '/blog-single-fullwidth',
-            },
-        ]
-    },
-  
-    {
-        id: 7,
-        title: 'Pages',
-        submenu: [
-            {
-                id: 71,
-                title: 'pricing table',
-                link: '/pricing',
-            },
-            {
-                id: 72,
-                title: 'Team',
-                link: '/team',
-            },
-        ]
+        title: 'Track',
+        external: true,
+        link: 'https://www.client.deepclear.ca/cbsa-checking',
     },
     {
-        id: 6,
+        id: 5,
         title: 'Contact',
         link: '/contact',
     },
-    
-]
-
+];
 
 class MobileMenu extends Component {
-
     state = {
         isMenuShow: false,
         isOpen: 0,
-    }
+    };
 
     menuHandler = () => {
         this.setState({
             isMenuShow: !this.state.isMenuShow
-        })
-    }
+        });
+    };
 
     setIsOpen = id => () => {
         this.setState({
             isOpen: id === this.state.isOpen ? 0 : id
-        })
-    }
+        });
+    };
 
     render() {
-
         const { isMenuShow, isOpen } = this.state;
 
         return (
             <div>
-                <PerfectScrollbar >
+                <PerfectScrollbar>
                     <div className={`mobileMenu ${isMenuShow ? 'show' : ''}`}>
-                        {/* <div className="clox" onClick={this.menuHandler}>Close Me</div> */}
-
                         <ul className="responsivemenu">
-                            {menus.map(item => {
-                                return (
-                                    <li key={item.id}>
-                                        {item.submenu ? <p onClick={this.setIsOpen(item.id)}>
+                            {menus.map(item => (
+                                <li key={item.id}>
+                                    {/* Check if has submenu */}
+                                    {item.submenu ? (
+                                        <p onClick={this.setIsOpen(item.id)}>
                                             {item.title}
-                                            {item.submenu ? <i className="fa fa-angle-right" aria-hidden="true"></i> : ''}
-                                        </p> : <Link to={item.link}>{item.title}</Link>}
-                                        {item.submenu ?
+                                            <i className="fa fa-angle-right" aria-hidden="true"></i>
+                                        </p>
+                                    ) : item.external ? (
+                                        // External link (Track)
+                                        <a
+                                            href={item.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {item.title}
+                                        </a>
+                                    ) : (
+                                        <Link to={item.link}>{item.title}</Link>
+                                    )}
+
+                                    {/* Submenu collapse */}
+                                    {item.submenu ? (
                                         <Collapse isOpen={item.id === isOpen}>
                                             <Card>
                                                 <CardBody>
                                                     <ul>
-                                                        {item.submenu.map(submenu => (
-                                                            <li key={submenu.id}><Link className="active" to={submenu.link}>{submenu.title}</Link></li>
+                                                        {item.submenu.map(sub => (
+                                                            <li key={sub.id}>
+                                                                <Link className="active" to={sub.link}>
+                                                                    {sub.title}
+                                                                </Link>
+                                                            </li>
                                                         ))}
                                                     </ul>
                                                 </CardBody>
                                             </Card>
                                         </Collapse>
-                                        : ''}
-                                    </li>
-                                )
-                            })}
+                                    ) : null}
+                                </li>
+                            ))}
                         </ul>
                     </div>
-                    </PerfectScrollbar>
-                <div className="showmenu" onClick={this.menuHandler}><i className="fa fa-bars" aria-hidden="true"></i></div>
+                </PerfectScrollbar>
+
+                {/* Toggle button */}
+                <div className="showmenu" onClick={this.menuHandler}>
+                    <i className="fa fa-bars" aria-hidden="true"></i>
+                </div>
             </div>
-        )
+        );
     }
 }
 

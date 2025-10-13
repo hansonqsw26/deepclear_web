@@ -17,7 +17,8 @@ const Header = () => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            if (currentScrollY < lastScrollY && currentScrollY > 50) {
+            // Trigger when user scrolls down/up past 50px
+            if (currentScrollY > 50) {
                 setScrollUp(true);
             } else {
                 setScrollUp(false);
@@ -30,8 +31,8 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
 
-    const textColor = '#87ceeb'; // Soft Sky Blue
-    const topContactColor = '#fff'; // Top bar Contact Us white
+    const textColor = scrollUp ? '#0d1b3d' : '#87ceeb'; // Dark text when white bg, Sky Blue when transparent
+    const topContactColor = '#fff';
 
     return (
         <header>
@@ -64,34 +65,31 @@ const Header = () => {
             <div
                 className="header-style-1"
                 style={{
-                    backgroundColor: 'transparent',
-                    transition: 'background-color 0.3s ease',
+                    backgroundColor: scrollUp ? '#ffffff' : 'transparent',
+                    boxShadow: scrollUp ? '0 2px 8px rgba(0,0,0,0.1)' : 'none',
+                    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
                 }}
             >
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3 col-md-10 col-sm-10 col-8 col-t">
-                            <div className="logo">
-                                <Link to="/"><img src={logo} alt="" /></Link>
+                            <div className="logo" style={{position: 'relative', top: '-22px'}}>
+                                <Link to="/"><img src={logo} alt="DeepClear Logo"/></Link>
                             </div>
                         </div>
                         <div className="col-lg-8 d-none d-lg-block col-m">
                             <div className="main-menu">
-                                <nav className="nav_mobile_menu">
+                            <nav className="nav_mobile_menu">
                                     <ul>
-                                        <li className="active"><Link to="/" style={{color: textColor}}>Home</Link>
-                                            <ul className="submenu">
-                                                {/*<li className="active"><Link to="/" style={{ color: textColor }}>Home One</Link></li>*/}
-                                                {/*<li><Link to="/home2" style={{ color: textColor }}>Home Two</Link></li>*/}
-                                                {/*<li><Link to="/home3" style={{ color: textColor }}>Home Three</Link></li>*/}
-                                            </ul>
+                                        <li className="active">
+                                            <Link to="/" style={{ color: textColor }}>Home</Link>
                                         </li>
-                                        <li><Link to="/about" style={{color: textColor}}>About Us</Link></li>
-                                        <li><Link to="/servicesingle" style={{color: textColor}}>Service</Link>
+                                        <li><Link to="/about" style={{ color: textColor }}>About Us</Link></li>
+                                        <li>
+                                            <Link to="/servicesingle" style={{ color: textColor }}>Service</Link>
                                             <ul className="submenu">
-                                                <li><Link to="/servicesingle" style={{color: textColor}}>logistic</Link></li>
-                                                <li><Link to="/freight" style={{color: textColor}}>Customs Brokerage</Link>
-                                                </li>
+                                                <li><Link to="/servicesingle" style={{ color: textColor }}>Logistic</Link></li>
+                                                <li><Link to="/freight" style={{ color: textColor }}>Customs Brokerage</Link></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -99,41 +97,27 @@ const Header = () => {
                                                 href="https://www.client.deepclear.ca/cbsa-checking"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                style={{color: textColor}}
+                                                style={{ color: textColor }}
                                             >
                                                 Track
                                             </a>
                                         </li>
-
-
-                                        {/*<li><Link to="https://www.client.deepclear.ca/cbsa-checking"*/}
-                                        {/*          style={{color: textColor}}>Track</Link>*/}
-                                            {/*<ul className="submenu">*/}
-                                            {/*    <li><Link to="/blog" style={{ color: textColor }}>Blog with sidebar</Link></li>*/}
-                                            {/*    <li><Link to="/blog-fullwidth" style={{ color: textColor }}>Blog full width</Link></li>*/}
-                                            {/*    <li><Link to="/blog-single" style={{ color: textColor }}>Blog single sidebar</Link></li>*/}
-                                            {/*    <li><Link to="/blog-single-fullwidth" style={{ color: textColor }}>Blog single fullwidth</Link></li>*/}
-                                            {/*</ul>*/}
-                                        {/*</li>*/}
-                                        {/*<li><Link to="/" style={{ color: textColor }}>Pages</Link>*/}
-                                        {/*    <ul className="submenu">*/}
-                                        {/*        <li><Link to="/pricing" style={{ color: textColor }}>pricing table</Link></li>*/}
-                                        {/*        <li><Link to="/team" style={{ color: textColor }}>Team</Link></li>*/}
-                                        {/*    </ul>*/}
-                                        {/*</li>*/}
-                                        <li><Link to="/contact" style={{color: textColor}}>Contact</Link></li>
+                                        <li><Link to="/contact" style={{ color: textColor }}>Contact</Link></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div className="col-lg-1 col-md-1 col-sm-1 col-2 search">
                             <ul>
-                                <li><Link to="/"><i className="fa fa-search" style={{ color: textColor }}></i></Link>
+                                <li>
+                                    <Link to="/"><i className="fa fa-search" style={{ color: textColor }}></i></Link>
                                     <ul>
                                         <li>
                                             <form onSubmit={SubmitHandler}>
                                                 <input type="text" placeholder="search here.." style={{ color: textColor }} />
-                                                <button type="btn"><i className="fa fa-search" style={{ color: textColor }}></i></button>
+                                                <button type="btn">
+                                                    <i className="fa fa-search" style={{ color: textColor }}></i>
+                                                </button>
                                             </form>
                                         </li>
                                     </ul>

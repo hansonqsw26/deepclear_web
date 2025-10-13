@@ -1,92 +1,95 @@
-.wpo-footer-area{
+.wpo-footer-area {
     background: #142440;
-  }
-  .wpo-footer-top{
-    padding: 60px 0;
-  }
-  .wpo-footer-logo{
-    margin-bottom: 30px;
-  }
-  .social li a {
-      display: block;
-      height: 45px;
-      width: 45px;
-      background: #fff;
-      color: #333;
-      line-height: 45px;
-      border-radius: 50%;
-      text-align: center;
-      margin-right: 10px;
-      transition: all .3s;
-      margin-top: 5px;
-  }
-  .social li a:hover{
-    background:#34ccff;
-    color:#fff;
-  }
-  .wpo-footer-top p {
-      color: #fff;
-      margin-bottom: 30px;
-  }
-  .wpo-footer-top a{
-    color:#fff;
-  }
-  .Recent-News-area p{
-    margin-bottom: 10px;
-  }
-  .Recent-News-area span{
-    color:#bbb; 
-  }
-  .Recent-News-area span i{
-    padding-right: 10px;
-    color: #34ccff;
-  }
-  .resent-sub{
-    margin-bottom: 35px;
-  }
-  .instagram ul {
-      flex-wrap: wrap;
-      margin: 0px -3px;
-  }
-  
-  .instagram ul li {
-      -ms-flex: 0 0 33.33%;
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-      margin-bottom: 5px;
-      padding: 0px 3px;
-  }
-  
-  .instagram ul li img {
-      width: 100%;
-  }
-  .footer-widget.instagram{
-    margin-top: 0;
-  }
-  .footer-widget.instagram h3{
-    font-size: 25px;
-    margin-bottom: 30px;
-  }
-  .footer-link ul li a{
-    padding-top: 10px;
-    display: block;
-  }
-  .wpo-footer-top h3{
-    font-size: 25px;
-    color:#fff;
+}
+
+.wpo-footer-top {
+    padding: 0; /* remove container padding for clean split */
+}
+
+/* LEFT side white */
+.footer-left {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+.footer-left-inner {
+    max-width: 300px;
+}
+
+.footer-left p {
+    color: #000;
     margin-bottom: 20px;
-  }
-  
-  .wpo-footer-bottom{
+}
+
+.footer-left a,
+.footer-left i {
+    color: #000 !important;
+}
+
+.footer-left .social li a {
+    background: #142440;
+    color: #fff;
+}
+
+.footer-left .social li a:hover {
+    background: #34ccff;
+    color: #fff;
+}
+
+/* RIGHT side dark */
+.footer-dark {
+    background: #142440;
+    padding: 60px 40px;
+}
+
+.footer-dark h3 {
+    color: #fff;
+}
+
+.footer-dark p,
+.footer-dark a {
+    color: #ddd;
+}
+
+/* Social Icons */
+.social li a {
+    display: block;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    transition: all .3s;
+    margin-top: 5px;
+}
+
+.wpo-footer-bottom {
     background: #101e35;
     padding: 30px 0;
-  
-  }
-  .wpo-footer-bottom-content {
-      text-align: center;
-  }
-  .wpo-footer-bottom-content span{
-    color:#fff;
-    font-size: 16px;
+}
+
+.wpo-footer-bottom-content {
     text-align: center;
-  }
+}
+
+.wpo-footer-bottom-content span {
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-left .social li a {
+    background: #fff;              /* White background like original */
+    color: #333;                   /* Dark icon */
+    border: 1px solid #e0e0e0;     /* Light border to define shape on white */
+    transition: all 0.3s ease;
+}
+
+.footer-left .social li a:hover {
+    background: #34ccff;           /* Sky blue on hover */
+    color: #fff;                   /* White icon */
+    border-color: #34ccff;
+}

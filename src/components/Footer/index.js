@@ -8,31 +8,34 @@ const FooterSection = () => {
         <div className="wpo-footer-area">
             {/* Footer Top */}
             <div className="wpo-footer-top">
-                <div className="container">
-                    <div className="row">
-                        {/* Logo & Slogan */}
-                        <div className="col-lg-4 col-md-6 col-sm-6 footer-t">
-                            <div className="wpo-footer-logo">
-                                <img src={logo} alt="DeepClear Logo" />
-                            </div>
-                            <p>Think Deep, Solve Clear</p>
-                            <div className="social">
-                                <ul className="d-flex">
-                                    <li>
-                                        <Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/"><i className="fa fa-twitter" aria-hidden="true"></i></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/"><i className="fa fa-linkedin" aria-hidden="true"></i></Link>
-                                    </li>
-                                </ul>
+                <div className="container-fluid p-0">
+                    <div className="row no-gutters">
+
+                        {/* Left Side - White Background */}
+                        <div className="col-lg-4 col-md-12 footer-left">
+                            <div className="footer-left-inner">
+                                <div className="wpo-footer-logo">
+                                    <img src={logo} alt="DeepClear Logo" />
+                                </div>
+                                <p>Think Deep, Solve Clear</p>
+                                <div className="social">
+                                    <ul className="d-flex">
+                                        <li>
+                                            <Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/"><i className="fa fa-twitter" aria-hidden="true"></i></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/"><i className="fa fa-linkedin" aria-hidden="true"></i></Link>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Quick Links */}
-                        <div className="col-lg-4 col-md-6 col-sm-6 footer-t">
+                        {/* Middle - Quick Links */}
+                        <div className="col-lg-4 col-md-6 col-sm-6 footer-dark">
                             <div className="footer-link">
                                 <h3>Quick Links</h3>
                                 <ul>
@@ -52,16 +55,11 @@ const FooterSection = () => {
                             </div>
                         </div>
 
-                        {/* Recent News */}
-                        <div className="col-lg-4 col-md-6 col-sm-6 footer-b">
+                        {/* Right - Recent News */}
+                        <div className="col-lg-4 col-md-6 col-sm-6 footer-dark">
                             <div className="Recent-News-area">
                                 <h3>Recent News</h3>
-                                {/*<div className="resent-sub">*/}
-                                {/*    <p>There are many variations of passages of Lorem</p>*/}
-                                {/*    <span><i className="fa fa-clock-o" aria-hidden="true"></i> October 10, 2018</span>*/}
-                                {/*</div>*/}
-                                {/*<p>There are many variations of passages of Lorem</p>*/}
-                                {/*<span><i className="fa fa-clock-o" aria-hidden="true"></i> October 10, 2018</span>*/}
+                                <p style={{color: "#bbb"}}>Stay tuned for updates and industry insights.</p>
                             </div>
                         </div>
 
@@ -75,7 +73,7 @@ const FooterSection = () => {
                     <div className="wpo-footer-bottom-content">
                         <div className="row">
                             <div className="col-12 text-center">
-                                <span>© {new Date().getFullYear()} DeepClear Inc. All Rights Reserved.</span>
+                                <span>© {new Date().getFullYear()} DeepClear Solution Inc. All Rights Reserved.</span>
                             </div>
                         </div>
                     </div>
