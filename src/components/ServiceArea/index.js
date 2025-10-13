@@ -51,7 +51,7 @@ const ServiceArea = (props) => {
                                 </div>
                                 <h2>Air Freight</h2>
                                 <p>
-                                    DeepClear SolutionInc. handles air freight with speed and precision, ensuring critical shipments reach their destination safely and on time.
+                                    DeepClear Solution Inc. handles air freight with speed and precision, ensuring critical shipments reach their destination safely and on time.
                                 </p>
                             </div>
                         </div>
