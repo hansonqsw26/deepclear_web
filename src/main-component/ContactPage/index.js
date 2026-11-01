@@ -10,7 +10,6 @@ const ContactPage = () => {
     return (
         <div>
             <Navbar />
-            {/* Optional: <Breadcumb bdtitle={'Contact Us'} bdsub={'Contact'} /> */}
 
             {/* Add top padding to avoid overlap with header */}
             <div style={{ paddingTop: '120px' }}>
@@ -31,6 +30,7 @@ const ContactPage = () => {
                     >
                         Get in Touch
                     </h2>
+
                     <p
                         style={{
                             maxWidth: '600px',
@@ -48,6 +48,7 @@ const ContactPage = () => {
                             textAlign: 'left',
                         }}
                     >
+                        {/* Email */}
                         <div
                             style={{
                                 display: 'flex',
@@ -56,15 +57,38 @@ const ContactPage = () => {
                                 fontSize: '18px',
                             }}
                         >
-                            <span style={{ marginRight: '10px', fontSize: '22px' }}>📧</span>
+                            <span style={{ marginRight: '10px', fontSize: '22px' }}>
+                                📧
+                            </span>
                             <a
-                                href="mailto:info@deepclear.ca"
+                                href="mailto:customs@deepclear.ca"
                                 style={{ textDecoration: 'none', color: '#333' }}
                             >
-                                info@deepclear.ca
+                                customs@deepclear.ca
                             </a>
                         </div>
 
+                        {/* Phone */}
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginBottom: '10px',
+                                fontSize: '18px',
+                            }}
+                        >
+                            <span style={{ marginRight: '10px', fontSize: '22px' }}>
+                                📞
+                            </span>
+                            <a
+                                href="tel:6472237688"
+                                style={{ textDecoration: 'none', color: '#333' }}
+                            >
+                                647-223-7688
+                            </a>
+                        </div>
+
+                        {/* Fax */}
                         <div
                             style={{
                                 display: 'flex',
@@ -72,13 +96,12 @@ const ContactPage = () => {
                                 fontSize: '18px',
                             }}
                         >
-                            <span style={{ marginRight: '10px', fontSize: '22px' }}>📞</span>
-                            <a
-                                href="tel:6472237688"
-                                style={{ textDecoration: 'none', color: '#333' }}
-                            >
-                                647-223-7688
-                            </a>
+                            <span style={{ marginRight: '10px', fontSize: '22px' }}>
+                                📠
+                            </span>
+                            <span style={{ color: '#333' }}>
+                                Fax: 1-437-800-4373
+                            </span>
                         </div>
                     </div>
                 </div>

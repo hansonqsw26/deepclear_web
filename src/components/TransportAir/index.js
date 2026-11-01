@@ -19,7 +19,7 @@ const TransportAir = (props) => {
                                     </div>
                                     <div className="contact-s">
                                         <span><i className="fa fa-envelope-o" aria-hidden="true"></i>Email Us</span>
-                                        <p>info@deepclear.ca</p>
+                                        <p>customs@deepclear.ca</p>
                                     </div>
                                     <div className="contact-s">
                                         <span><i className="fa fa-map-marker" aria-hidden="true"></i>Our Location</span>
