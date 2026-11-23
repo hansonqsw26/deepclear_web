@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// Served from our own site, not jsDelivr / Google Fonts (both unreliable or blocked in China).
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './fonts/fonts.css';
 import App from '../src/main-component/App/App';
 import reportWebVitals from './reportWebVitals';
 import './css/font-awesome.min.css';

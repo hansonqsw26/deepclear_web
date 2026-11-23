@@ -9,7 +9,7 @@ URL:            https://themeforest.net/user/wpoceans
 /*---------------------------
   Fonts
 ----------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto:300,400,500,700');
+/* Montserrat and Roboto are self-hosted: src/fonts/fonts.css (imported in src/index.js). */
 /*--------------------------------------------------------------
 #0.1    Theme Reset Style
 --------------------------------------------------------------*/
